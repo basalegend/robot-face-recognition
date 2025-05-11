@@ -1,0 +1,153 @@
+:root {
+    --primary-color: #2196F3;
+    --secondary-color: #1976D2;
+    --background-color: #f5f5f5;
+    --card-background: #ffffff;
+    --text-color: #333333;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--background-color);
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+}
+
+.dashboard {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 20px;
+    background: var(--card-background);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.title {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.stats {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.stat-card {
+    background: var(--card-background);
+    padding: 15px 25px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    min-width: 120px;
+    text-align: center;
+}
+
+.time-card {
+    min-width: 100px;
+    padding: 10px 15px;
+    background: var(--primary-color);
+}
+
+.time-card .stat-value {
+    color: white;
+    font-size: 18px;
+}
+
+.time-card .stat-label {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.stat-value {
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--primary-color);
+    margin: 5px 0;
+}
+
+.stat-label {
+    font-size: 12px;
+    color: #666;
+    text-transform: uppercase;
+}
+
+.video-container {
+    background: var(--card-background);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.video-feed {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+.controls {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+.control-button {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.control-button:hover {
+    background: var(--secondary-color);
+}
+
+.status-indicator {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 5px 10px;
+    border-radius: 15px;
+    color: white;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    background: #4CAF50;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+} 
